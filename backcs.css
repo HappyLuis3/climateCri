@@ -1,0 +1,68 @@
+/* will hide the links */
+.topnav #myLinks {
+    display: flex;
+  }
+  
+
+
+/* to modify the bar her */
+#navbar {
+    display: flex;
+    position: sticky;
+    align-items: center; /* Centers items vertically */
+
+    
+    top: 0;
+    overflow: hidden;
+    padding: 5px;
+
+    /* this is the background color for the shit */
+    background-color: blue;
+  }
+  
+  
+  /* change the right to left for link placement on navar having trouble seperating it so they can be
+distance of each other */
+  #navbar a {
+    
+    color: #f2f2f2;
+    text-decoration: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  
+  .content {
+    padding: 16px;
+  }
+
+
+
+  .topnav {
+    overflow: hidden;
+    background-color: #333;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+  }
+  
+  
+  .topnav a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+  }
+  
+
+
+  .topnav a.icon {
+    background: black;
+    color: white;
+    display: block;
+    padding: 14px 16px;
+    cursor: pointer;
+  }
