@@ -1,10 +1,20 @@
 /* will hide the links */
 .topnav #myLinks {
     display: flex;
-  }
+}
+
+.top-image {
+  height: 400px;
+  overflow: hidden;
+}
+
+.top-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
   
-
-
 /* to modify the bar her */
 #navbar {
     display: flex;
@@ -18,7 +28,7 @@
 
     /* this is the background color for the shit */
     background-color: blue;
-  }
+}
   
   
   /* change the right to left for link placement on navar having trouble seperating it so they can be
@@ -29,12 +39,14 @@ distance of each other */
     text-decoration: center;
     padding: 14px 16px;
     text-decoration: none;
-  }
+}
   
   
   .content {
+    display: flex;
     padding: 16px;
-  }
+    max-width: 900px;
+}
 
 
 
@@ -46,7 +58,7 @@ distance of each other */
     justify-content: space-between;
     align-items: center;
     padding: 0 16px;
-  }
+}
   
   
   .topnav a {
@@ -55,7 +67,7 @@ distance of each other */
     text-decoration: none;
     font-size: 17px;
     display: block;
-  }
+}
   
 
 
@@ -65,4 +77,5 @@ distance of each other */
     display: block;
     padding: 14px 16px;
     cursor: pointer;
-  }
+}
+
