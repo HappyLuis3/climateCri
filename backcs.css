@@ -1,18 +1,20 @@
-/* will hide the links */
-.topnav #myLinks {
-    display: flex;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
-
 
 .top-image {
-  height: 400px;
+  height: 300px;
   overflow: hidden;
 }
 
@@ -20,80 +22,75 @@ body{
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
 }
-  
-/* to modify the bar her */
+
 #navbar {
-    display: flex;
-    position: sticky;
-    align-items: center; /* Centers items vertically */
-
-    
-    top: 0;
-    overflow: hidden;
-    padding: 5px;
-
-    /* this is the background color for the shit */
-    background-color: blue;
-}
-  
-  
-  /* change the right to left for link placement on navar having trouble seperating it so they can be
-distance of each other */
-  #navbar a {
-    
-    color: #f2f2f2;
-    text-decoration: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-  
-  
-  .content {
-    display: flex;
-    padding: 16px;
-    max-width: 900px;
-    text-align: center;
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-
-
-  .topnav {
-    overflow: hidden;
-    background-color: #333;
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 16px;
+#navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
 }
-  
-  
-  .topnav a {
-    color: white;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-    display: block;
+
+#navbar a:hover {
+  background-color: #444;
 }
-  
 
+#navbar a.icon {
+  display: none;
+}
 
-  .topnav a.icon {
-    background: black;
-    color: white;
-    display: block;
-    padding: 14px 16px;
-    cursor: pointer;
+#myLinks {
+  display: flex;
+}
+
+.content {
+  padding: 20px;
+  text-align: center;
+  flex: 1;
+}
+
+.content h2 {
+  margin-bottom: 20px;
+}
+
+.content ul {
+  list-style-type: none;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.fact-item {
+  margin: 30px 0;
+}
+
+.fact-item:hover {
+  color: #666;
 }
 
 footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+@media screen and (max-width: 600px) {
+  #myLinks {
+      display: none;
+      flex-direction: column;
+  }
+
+  #navbar a.icon {
+      display: block;
+  }
 }
