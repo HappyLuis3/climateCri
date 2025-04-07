@@ -10,12 +10,20 @@ body {
   color: #333;
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
+}
+
+.main-layout {
+  display: grid;
+  grid-template-areas:
+      "left-nav content right-sidebar";
+  grid-template-columns: 1fr 3fr 1fr;
+  gap: 20px;
+  padding: 20px;
 }
 
 .top-image {
   height: 300px;
-  overflow: hidden;
 }
 
 .top-image img {
@@ -33,12 +41,18 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 1000;
 }
 
 #navbar a {
   color: white;
   text-decoration: none;
   padding: 10px;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+
 }
 
 #navbar a:hover {
@@ -84,13 +98,41 @@ footer {
   padding: 15px;
 }
 
+
+#navbar a.icon {
+  display: block;
+
+}
+
+.left-sidebar {
+  grid-area: left-nav;
+}
+
+.right-sidebar {
+  grid-area: right-sidebar;
+}
+
+.content {
+  grid-area: content;
+}
+
+
+.content p {
+  margin-bottom: 20px;
+  line-height: 1.6;
+
+}
+
+/* mobile things */
+
 @media screen and (max-width: 600px) {
-  #myLinks {
+  #navbar a:not(.icon) {
       display: none;
-      flex-direction: column;
   }
 
-  #navbar a.icon {
-      display: block;
+  .left-sidebar,
+  .right-sidebar {
+      display: none;
   }
+
 }
