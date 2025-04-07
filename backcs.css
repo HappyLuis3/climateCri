@@ -13,6 +13,10 @@ body {
   min-height: 100vh;
 }
 
+ul li:nth-child(1n) {
+  font-weight: bold; 
+}
+
 .main-layout {
   display: grid;
   grid-template-areas:
