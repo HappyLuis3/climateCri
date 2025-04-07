@@ -1,68 +1,96 @@
-/* will hide the links */
-.topnav #myLinks {
-    display: flex;
-  }
-  
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
 
-/* to modify the bar her */
+.top-image {
+  height: 300px;
+  overflow: hidden;
+}
+
+.top-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 #navbar {
-    display: flex;
-    position: sticky;
-    align-items: center; /* Centers items vertically */
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-    
-    top: 0;
-    overflow: hidden;
-    padding: 5px;
+#navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+}
 
-    /* this is the background color for the shit */
-    background-color: blue;
+#navbar a:hover {
+  background-color: #444;
+}
+
+#navbar a.icon {
+  display: none;
+}
+
+#myLinks {
+  display: flex;
+}
+
+.content {
+  padding: 20px;
+  text-align: center;
+  flex: 1;
+}
+
+.content h2 {
+  margin-bottom: 20px;
+}
+
+.content ul {
+  list-style-type: none;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.fact-item {
+  margin: 30px 0;
+}
+
+.fact-item:hover {
+  color: #666;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+@media screen and (max-width: 600px) {
+  #myLinks {
+      display: none;
+      flex-direction: column;
   }
-  
-  
-  /* change the right to left for link placement on navar having trouble seperating it so they can be
-distance of each other */
-  #navbar a {
-    
-    color: #f2f2f2;
-    text-decoration: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  
-  
-  .content {
-    padding: 16px;
-  }
 
-
-
-  .topnav {
-    overflow: hidden;
-    background-color: #333;
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 16px;
+  #navbar a.icon {
+      display: block;
   }
-  
-  
-  .topnav a {
-    color: white;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-    display: block;
-  }
-  
-
-
-  .topnav a.icon {
-    background: black;
-    color: white;
-    display: block;
-    padding: 14px 16px;
-    cursor: pointer;
-  }
+}
